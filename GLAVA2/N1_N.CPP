@@ -10,6 +10,8 @@
 typedef int EL;
 #include "incl_stc.c"	/*файл с дескриптором стека и
 					   функциями для работы со стеком */
+extern int Show_stc(STC s);
+extern int In_el(EL * el);
 static long N;
 int B;
 EL e;
