@@ -18,7 +18,7 @@ int s[n], opts[n];
 static int K = 0;
 int ves, st;
 /* =========================================== */
-void try(obj a[], int i, int tw, int av)
+void try_to(obj a[], int i, int tw, int av)
 {
     int av1, tw1, j;
     K++;
@@ -28,7 +28,7 @@ void try(obj a[], int i, int tw, int av)
     {
         s[i] = i + 1;
         if (i < n - 1)
-            try(a, i + 1, tw1, av);
+            try_to(a, i + 1, tw1, av);
         else if (av > maxv)
         {
             maxv = av;
@@ -53,7 +53,7 @@ void try(obj a[], int i, int tw, int av)
     av1 = av - a[i].v;
     if (av1 > maxv)
         if (i < n - 1)
-            try(a, i + 1, tw, av1);
+            try_to(a, i + 1, tw, av1);
         else
         {
             maxv = av1;
@@ -113,7 +113,7 @@ main()
             opts[i] = -1;
         }
         K = 0;
-        try(a, 0, 0, totv);
+        try_to(a, 0, 0, totv);
         printf("\n");
         w = 0;
         v = 0;
