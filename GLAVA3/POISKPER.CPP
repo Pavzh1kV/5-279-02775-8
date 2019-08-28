@@ -17,7 +17,8 @@
 //#include <conio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include <iostream.h>
+#include <iostream>
+using namespace std;
 #define n 21			/*количество узлов дерева для примера */
 typedef struct DataNode  	/* структура данных в узле   */
 {
@@ -27,7 +28,7 @@ DataNode ai;
 typedef DataNode DT;		/* тип данных для связи с файлом включения */
 #define Skey Dkey		/* имя ключа для связи с файлом включения  */
 void visit(DT * dt);		/* расширение в обработке данных узла */
-#include "c:\bc\xbs\tree\poiskper.h"	/* для деревьев поиска */
+#include "POISKPER.H"	/* для деревьев поиска */
 REC *S, *AV, *R, *T, *E, *A, *C;
 char a[n][10] = { "h11", "d9", "s7", "a8", "n15", "b19", "c20", "e21",
                   "x2", "z3", "k1", "d6", "w4", "q5", "h13", "m14", "f10", "y12", "o17",
