@@ -127,7 +127,7 @@ int main()
     ("\n Вычисление кратчайшего пути между вершинами  \n");
     printf
     ("     в неориентированном взвешенном графе");
-    Floyd(A, C, P, 6);
+    Floyd(*A, *C, *P, t);
     printf("\n Матрица кратчайших путей:");
     for (i = 0; i < t; i++)
     {
@@ -176,7 +176,7 @@ int main()
         }
         if (p)
             break;
-        MinPath(P, A, t, i, j);
+        MinPath(*P, *A, t, i, j);
     }
     printf("\n Конец работы");
     getchar();
