@@ -28,7 +28,7 @@ void Crt_Btree(void);		//создание выбранного дерева
 void Prnt(void);		//вывод сообщения "на стадии разработки"
 void In_Key();			//ввод ключа элемента
 int i, pp, ts = 1;
-const k = 21;			//число строк меню
+const int k = 21;			//число строк меню
 char *menu[k][60];		//строки меню
 /* ========================================================== */
 /* ГЛАВНАЯ ФУНКЦИЯ */
@@ -36,7 +36,6 @@ char *menu[k][60];		//строки меню
 using namespace std;
 int main()
 {
-    setlocale(LC_ALL,"Russian");
     setlocale(LC_ALL,"Russian");
     pp = 1;
     cout <<
